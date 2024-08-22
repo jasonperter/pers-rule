@@ -484,7 +484,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect - reject
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config - reject
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get - reject
-^https?:\/\/.*map\.baidu\.com\/.*govui\/rich_content - reject
+#百度地图无网注^https?:\/\/.*map\.baidu\.com\/.*govui\/rich_content - reject
 #百度地图无网注^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw - reject
 #百度地图无网注^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
 ^https?:\/\/httpdns\.baidubce\.com - reject

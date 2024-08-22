@@ -54,7 +54,7 @@ URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-T
 ^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) - reject
 ^https:\/\/api\.sfacg\.com\/ioscfg - reject
 ^https?:\/\/pan-api\.bitqiu\.com\/activity\/getPromoteGuide - reject
-^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.php - reject
+#百度地图注^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.php - reject
 ^http:\/\/.*babytree\.com/(plough\.do|go_search\/api\/mobile_search_new\/get_multi_search_default_keywords) - reject
 ^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend - reject
 ^https?:\/\/notify\.baicizhan\.com\/rpc\/notify\/get_latest_notify - reject

@@ -54,7 +54,7 @@ URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-T
 ^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) - reject
 ^https:\/\/api\.sfacg\.com\/ioscfg - reject
 ^https?:\/\/pan-api\.bitqiu\.com\/activity\/getPromoteGuide - reject
-#百度地图注^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.php - reject
+^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.php - reject
 ^http:\/\/.*babytree\.com/(plough\.do|go_search\/api\/mobile_search_new\/get_multi_search_default_keywords) - reject
 ^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend - reject
 ^https?:\/\/notify\.baicizhan\.com\/rpc\/notify\/get_latest_notify - reject
@@ -485,11 +485,11 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config - reject
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get - reject
 ^https?:\/\/.*map\.baidu\.com\/.*govui\/rich_content - reject
-#百度地图无网注^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw - reject
-#百度地图无网注^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw - reject
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
 ^https?:\/\/httpdns\.baidubce\.com - reject
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing - reject
-^https?:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/home\/dynamic - reject
+#百度地图无网注^https?:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/home\/dynamic - reject
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul - reject
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul - reject
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/wiki_related_modul - reject

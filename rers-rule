@@ -488,7 +488,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw - reject
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - reject
 ^https?:\/\/httpdns\.baidubce\.com - reject
-^https?:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing - reject
+#百度地图无网注掉^https?:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing - reject
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/home\/dynamic - reject
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul - reject
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul - reject

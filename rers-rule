@@ -1,9 +1,11 @@
-#!name=广告屏蔽
-#!desc=自用广告屏蔽
+#!name=自用规则模块
+#!desc=自用规则模块
 #!category=zqzess
 
 [General]
-#force-http-engine-hosts = %APPEND% *.cp31.ott.cibntv.net
+# 跳过代理使用
+skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1
+always-real-ip = %APPEND% www.localnetwork.up
 
 [Rule]
 

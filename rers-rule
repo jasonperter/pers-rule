@@ -1,24 +1,10 @@
-#!name=for personnal rules
+#!name=For perules
 #!desc=自用规则模块
-#!category=zqzess
 
 [General]
 # 跳过代理使用
 skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1
 always-real-ip = %APPEND% www.localnetwork.up
-
-[Rule]
-
-# 百度移动广告联盟，可能误杀
-DOMAIN-SUFFIX,mobads.baidu.com,REJECT
-# 腾讯广告联盟，可能误杀
-DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT
-DOMAIN-SUFFIX,jcollection.shuqireader.com,REJECT
-DOMAIN-SUFFIX,stats.jpush.cn,REJECT
-DOMAIN-SUFFIX,sdk.kaijiawan.com,REJECT
-
-# 京东开屏广告屏蔽
-URL-REGEX,https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
 
 [URL Rewrite]
 https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-dict

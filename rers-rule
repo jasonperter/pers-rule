@@ -1,5 +1,5 @@
 #!name=For perules1
-#!desc=自用跳过DDPAI直连
+#!desc=自用跳过DDPAI直连,解除 GitHub 针对 zh-CN 的语言限制
 #!author=Mixed
 
 [General]
@@ -23,5 +23,8 @@ always-real-ip = %APPEND% www.localnetwork.up
 ^https?:\/\/storage\.360buyimg\.com\/kepler-app - reject-img
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ - reject-img
 
+[Script]
+GitHub = type=http-request, script-path=Script/header.js, pattern=^https:\/\/(?:raw|gist|avatars)\.githubusercontent\.com, max-size=0, timeout=30, script-update-interval=0, enable=true
+
 [MITM]
-hostname = %APPEND%m.360buyimg.com
+hostname = %APPEND%m.360buyimg.com, hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, avatars.githubusercontent.com

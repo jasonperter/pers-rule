@@ -2,13 +2,29 @@
 #!desc=自用跳过DDPAI直连,解除 GitHub 针对 zh-CN 的语言限制
 #!author=Mixed
 
+[Rule]
+DOMAIN,msmp.abchina.com.cn,REJECT
+
 [General]
 # 跳过代理使用
-skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1
-always-real-ip = %APPEND% www.localnetwork.up
+skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1，www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,id6.me,www.163.com
+always-real-ip = %APPEND% www.localnetwork.up,easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
 
 [Script]
 GitHub = type=http-request, script-path=Script/header.js, pattern=^https:\/\/(?:raw|gist|avatars)\.githubusercontent\.com, max-size=0, timeout=30, script-update-interval=0, enable=true
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, avatars.githubusercontent.com
+
+# www.baidu.com：网上国网、多看阅读、顺丰金融、广东农信、丰云行、中国银行缤纷生活、通信行程卡app、趣智校园、趣听音乐、光大手机银行、掌上12333、沃视频
+# yunbusiness.ccb.com 建行生活
+# wxh.wo.cn：沃小号
+# gate.lagou.com：拉勾招聘
+# www.abchina.com.cn 中国农业银行
+# www.shanbay.com 扇贝单词消息中心
+# www.google.com 成都公积金
+# login-service.mobile-bank.psbc.com,mobile-bank.psbc.com 中国邮政储蓄银行
+# easy-login.10099.com.cn 中国广电
+# *-update.xoyocdn.com 剑网三无界
+# id6.me 中国电信一键登陆
+# www.163.com 交管12123

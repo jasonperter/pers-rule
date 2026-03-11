@@ -5,7 +5,8 @@
 [DNS]
 fallback = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
 fallback-filter.geoip = true
-fallback-filter.ipcidr = 240.0.0.0/4
+fallback-filter.geoip-code = CN
+fallback-filter.ipcidr = 240.0.0.0/4,0.0.0.0/32,127.0.0.0/8
 
 [Rule]
 DOMAIN,msmp.abchina.com.cn,REJECT

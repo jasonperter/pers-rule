@@ -2,6 +2,11 @@
 #!desc=自用跳过DDPAI直连,解除 GitHub 针对 zh-CN 的语言限制
 #!author=Mixed
 
+[DNS]
+fallback = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
+fallback-filter.geoip = true
+fallback-filter.ipcidr = 240.0.0.0/4
+
 [Rule]
 DOMAIN,msmp.abchina.com.cn,REJECT
 

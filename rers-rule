@@ -1,5 +1,5 @@
 #!name=For perules1
-#!desc=自用跳过DDPAI直连,解除 GitHub 针对 zh-CN 的语言限制
+#!desc=自用跳过DDPAI直连
 #!author=Mixed
 
 [DNS]
@@ -15,8 +15,6 @@ DOMAIN,msmp.abchina.com.cn,REJECT
 skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1，www.baidu.com,www.abchina.com.cn,id6.me,www.163.com
 always-real-ip = %APPEND% www.localnetwork.up,easy-login.10099.com.cn,id6.me,open.e.189.cn
 
-[Script]
-GitHub = type=http-request, script-path=Script/header.js, pattern=^https:\/\/(?:raw|gist|avatars)\.githubusercontent\.com, max-size=0, timeout=30, script-update-interval=0, enable=true
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, avatars.githubusercontent.com

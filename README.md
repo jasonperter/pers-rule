@@ -1,2 +1,1 @@
-# pers-rule
-练习使用github
+一个什么也不会的人

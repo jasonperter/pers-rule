@@ -1,0 +1,8 @@
+[General]
+
+dns-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,223.6.6.6,119.29.29.29
+fallback-dns-server = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
+
+# 跳过代理使用
+skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1，www.baidu.com,www.abchina.com.cn,id6.me,www.163.com
+always-real-ip = %APPEND% www.localnetwork.up,easy-login.10099.com.cn,id6.me,open.e.189.cn

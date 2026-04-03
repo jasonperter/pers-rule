@@ -4,15 +4,27 @@
 
 [General]
 
-dns-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,223.6.6.6,119.29.29.29
+dns-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,223.6.6.6
 fallback-dns-server = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
 
 # 跳过代理使用
 skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1,www.baidu.com,www.abchina.com.cn,id6.me,www.163.com
 always-real-ip = %APPEND% www.localnetwork.up,easy-login.10099.com.cn,id6.me,open.e.189.cn
 
+# 私有 IP 应答。如果不启用此选项，域名解析返回私有 IP，Shadowrocket 会认为该域名被劫持而强制使用代理。
+private-ip-answer = true
+
 [Rule]
 DOMAIN,msmp.abchina.com.cn,REJECT
+
+RULE-SET,https://raw.githubusercontent.com/iab0x00/ProxyRules/main/Rule/AI.txt,PROXY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY
+
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list,DIRECT
+
+# 本地局域网地址的规则集。
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Lan/Lan.list,DIRECT
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, avatars.githubusercontent.com

@@ -4,8 +4,8 @@
 
 [General]
 
-dns-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query,223.6.6.6
-fallback-dns-server = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query
+dns-server = https://dns.alidns.com/dns-query,https://doh.pub/dns-query
+fallback-dns-server = https://cloudflare-dns.com/dns-query,https://dns.google/dns-query,tls://one.one.one.one
 
 # 跳过代理使用
 skip-proxy = %APPEND% www.localnetwork.up,193.168.0.1,www.baidu.com,www.abchina.com.cn,id6.me,www.163.com
@@ -17,10 +17,6 @@ private-ip-answer = true
 [Rule]
 DOMAIN,msmp.abchina.com.cn,REJECT
 
-RULE-SET,https://raw.githubusercontent.com/iab0x00/ProxyRules/main/Rule/AI.txt,PROXY
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list,PROXY
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY
-
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/WeChat/WeChat.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AliPay/AliPay.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DingTalk/DingTalk.list,DIRECT
@@ -30,12 +26,12 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoMi/XiaoMi.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BOC/BOC.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ICBC/ICBC.list,DIRECT
-
 # 本地局域网地址的规则集。
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Lan/Lan.list,DIRECT
 
-[MITM]
-hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, avatars.githubusercontent.com
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY
 
 # www.baidu.com：网上国网、多看阅读、顺丰金融、广东农信、丰云行、中国银行缤纷生活、通信行程卡app、趣智校园、趣听音乐、光大手机银行、掌上12333、沃视频
 # www.abchina.com.cn 中国农业银行

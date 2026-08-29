@@ -21,6 +21,9 @@ always-real-ip = %APPEND% www.localnetwork.up,easy-login.10099.com.cn,id6.me,ope
 private-ip-answer = true
 
 [Rule]
+
+DOMAIN-KEYWORD,push.apple.com,DIRECT
+IP-CIDR,17.0.0.0/18,DIRECT
 DOMAIN,msmp.abchina.com.cn,REJECT
 
 # RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/WeChat/WeChat.list,DIRECT

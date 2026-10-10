@@ -1,1 +1,1 @@
-一个什么也不会的人
+A person who can't do anything

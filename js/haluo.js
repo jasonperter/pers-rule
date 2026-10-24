@@ -176,7 +176,9 @@ function hbeTakeContext(hbeRequest, hbeResponse) {
         var hbeResponseID = hbeSessionIndex(hbeResponse);
         var hbeRequestSlot = hbeContextKey(hbeRequestID);
         var hbeResponseSlot = hbeContextKey(hbeResponseID);
-        if (hbeRequestSlot && hbeResponseSlot && hbeRequestID !== hbeResponseID) return null;
+        // Shadowrocket does not expose Quantumult X's paired sessionIndex.
+        // Only enforce equality when both real sessionIndex values are present.
+        if (hbeRequest && hbeResponse && hbeRequest.sessionIndex != null && hbeResponse.sessionIndex != null && hbeRequestSlot && hbeResponseSlot && hbeRequestID !== hbeResponseID) return null;
         var hbeSaved = null;
         if (hbeRequestSlot && hbeResponseSlot && typeof $prefs === "object" && $prefs) {
             var hbeRaw = $prefs.valueForKey(hbeRequestSlot);

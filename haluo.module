@@ -1,0 +1,14 @@
+#!name=哈啰净化
+#!自用、改自作者ZenMoFiShi，侵删，谢谢！
+[URL Rewrite]
+^https?:\/\/api-htp\.beizi\.biz\/mb\/sdk0\/json(?:\?|$) - reject-200
+^https?:\/\/adservice\.sigmob\.cn\/(?:hb\/v2\/ad|ad\/v4)(?:\?|$) - reject-200
+^https?:\/\/tm\.sigmob\.cn\/(?:waterfall\/v1|strategy\/v6)(?:\?|$) - reject-200
+^https?:\/\/(?:mi|v2mi)\.gdt\.qq\.com\/(?:gdt_mview\.fcg|server_bidding2)(?:\?|$) - reject-200
+
+[Script]
+哈啰请求上下文 = type=http-request,pattern=^https?:\/\/(?:api|marketingapi|entertainment)\.hellobike\.com(?::\d+)?\/api(?:\?|$),script-path=haluo.js,requires-body=1,max-size=1048576,timeout=30,engine=webview
+哈啰响应净化 = type=http-response,pattern=^https:\/\/resource\.51downapp\.cn\/f414fbc17c411b4e986ba8891c738a49\.json(?:\?|$)|^https:\/\/api\.hellobike\.com(?::443)?\/secretkey(?:\?|$)|^https?:\/\/(?:api|marketingapi|entertainment)\.hellobike\.com(?::\d+)?\/api(?:\?|$),script-path=哈啰净化-shadowrocket.js,requires-body=1,max-size=4194304,timeout=30,engine=webview
+
+[MITM]
+hostname = %APPEND% api.hellobike.com, marketingapi.hellobike.com, entertainment.hellobike.com, api-htp.beizi.biz, adservice.sigmob.cn, tm.sigmob.cn, mi.gdt.qq.com, v2mi.gdt.qq.com, resource.51downapp.cn

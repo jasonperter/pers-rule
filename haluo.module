@@ -8,7 +8,7 @@
 ^https?:\/\/(?:mi|v2mi)\.gdt\.qq\.com\/(?:gdt_mview\.fcg|server_bidding2)(?:\?|$) - reject-200
 
 [Script]
-hbe-lite = type=http-response, pattern=^https?:\/\/[^\/]*hellobike\.com\/, requires-body=1, max-size=2097152, script-path=hellobike-ultra-lite.js
+hbe-lite = type=http-response, pattern=^https?:\/\/[^\/]*hellobike\.com\/, requires-body=1, max-size=2097152, script-path=https://raw.githubusercontent.com/jasonperter/pers-rule/refs/heads/main/js/haluo.js
 
 [MITM]
 hostname = %APPEND% api.hellobike.com, marketingapi.hellobike.com, entertainment.hellobike.com, api-htp.beizi.biz, adservice.sigmob.cn, tm.sigmob.cn, mi.gdt.qq.com, v2mi.gdt.qq.com, resource.51downapp.cn
